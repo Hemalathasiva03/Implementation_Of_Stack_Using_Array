@@ -43,7 +43,7 @@ import java.util.EmptyStackException;
   	}
 	
 	  //4.return the top of the element in stack
-  	  public int Peeek() {
+  	  public int Peek() {
   		if(size == 0)
   		{
   			throw new EmptyStackException();
