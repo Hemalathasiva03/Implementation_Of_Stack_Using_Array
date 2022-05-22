@@ -11,9 +11,9 @@ public class StackMain {
 		obj.Push(3);  //Push the element 3
 		obj.Push(4);  //Push the element 4
 		obj.Push(5);  //Push the element 5
-		System.out.println("Peeked : "+obj.Peeek());
+		System.out.println("Peeked : "+obj.Peek());
 		System.out.println("Popped : "+obj.Pop());
-		System.out.println("Peeked : "+obj.Peeek());
+		System.out.println("Peeked : "+obj.Peek());
 		System.out.println("Size : "+obj.Size());
 		System.out.println("total capacity :"+obj.Capacity());
 		System.out.println("Remaining capacity : "+obj.RemainCapacity());
