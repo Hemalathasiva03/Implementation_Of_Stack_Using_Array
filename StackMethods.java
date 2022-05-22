@@ -7,10 +7,10 @@ import java.util.EmptyStackException;
 	
 		public StackMethods(){
 		  stack = new int[INITIAL_SIZE];
-		  size = -1;	
+		  size = 0;	
 		}
 	
-	 //adding the element in stack if the stack is full then create double the capacity
+	 //1.adding the element in stack
 	 public void Push(int element) {
 	  if(size == stack.length)
 		  {
@@ -20,7 +20,7 @@ import java.util.EmptyStackException;
 		stack[size] = element;
 	 }
 	
-	 //If size is full then capacity will doublely created in extendedstack
+	 //2.If size is full then capacity will doublely created in extendedstack
          private void doublecapacity()
   	 {
   		int extendedcapacity = 2*stack.length;
@@ -31,9 +31,9 @@ import java.util.EmptyStackException;
   		stack = extendedstack;
   	  }
 
-	  //delete the top of the element in stack also return top element
+	  //3.delete the top of the element in stack also return top element
   	  public int Pop() {
-  		if(size == -1)
+  		if(size == 0)
   		{
   			throw new EmptyStackException();
   		}
@@ -42,48 +42,48 @@ import java.util.EmptyStackException;
   		return popped;
   	}
 	
-	  //return the top of the element in stack
+	  //4.return the top of the element in stack
   	  public int Peeek() {
-  		if(size == -1)
+  		if(size == 0)
   		{
   			throw new EmptyStackException();
   		}
   		int peeked = stack[size];
   		return peeked;
   	  }
-	  //return stored size of the stack 
+	  //5.return stored size of the stack 
   	  public int Size() 
   	  {
   		return size;
   	  }
 	
-	  //Stack is empty return true
+	  //6.Stack is empty return true
   	  public boolean Empty() {
-  		if(size == -1){
+  		if(size == 0){
   			return true;
   		}
   		return false;
   	  }
 	
-	  //how many element are stored In capcity 
+	  //7.how many element are stored In capcity 
   	  public int Capacity() 
   	  {
   		return stack.length;
   	  }
 	
 	
-	  //expect the store the element remaining capacity in stack
+	  //8.return remaining capacity in stack
   	  public int RemainCapacity() {
   		int remaincapacity = stack.length-size;
   		return remaincapacity;
   	  }
 
-	  //Display the Stack
+	  //9.Display the Stack
   	  public int[] display() 
   	  {
-  		int[] a =new int[Size()+1];
-  		for(int i=0;i<=Size();i++){
-  			a[i] = stack[i];	
+  		int[] a =new int[Size()];
+  		for(int i=0;i<Size();i++){
+  			a[i] = stack[i+1];	
   		}
   		return a;
   	  }
