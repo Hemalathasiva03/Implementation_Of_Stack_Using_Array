@@ -1,5 +1,3 @@
-import java.util.EmptyStackException;
-
 	public class StackMethods {
 		private int[] stack;
 		private int size ;
@@ -35,7 +33,7 @@ import java.util.EmptyStackException;
   	  public int Pop() {
   		if(size == 0)
   		{
-  			throw new EmptyStackException();
+  			System.out.println("Stack is Empty");
   		}
   		int popped = stack[size];
   		size--;
@@ -46,7 +44,7 @@ import java.util.EmptyStackException;
   	  public int Peek() {
   		if(size == 0)
   		{
-  			throw new EmptyStackException();
+  			System.out.println("Stack is Empty");
   		}
   		int peeked = stack[size];
   		return peeked;
